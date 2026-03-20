@@ -1,0 +1,39 @@
+<svg width="1600" height="1280" viewBox="0 0 1600 1280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1280" rx="48" fill="#0E0F13"/>
+  <rect x="64" y="72" width="1472" height="1136" rx="40" fill="url(#bg)"/>
+  <circle cx="1320" cy="230" r="220" fill="url(#glowA)" fill-opacity="0.75"/>
+  <circle cx="980" cy="860" r="240" fill="url(#glowB)" fill-opacity="0.55"/>
+  <text x="156" y="264" fill="#F5F5F7" font-family="Arial, sans-serif" font-size="60" font-weight="700">YCOMMA</text>
+  <text x="156" y="356" fill="#F5F5F7" font-family="Arial, sans-serif" font-size="92" font-weight="800">Growth</text>
+  <text x="156" y="452" fill="#F5F5F7" font-family="Arial, sans-serif" font-size="92" font-weight="800">Engine</text>
+  <text x="156" y="528" fill="#8E98A8" font-family="Arial, sans-serif" font-size="28">Campaign execution, channel expansion, and repeatable scale.</text>
+  <path d="M220 876C332 812 408 782 500 738C602 690 652 664 766 580C878 498 968 438 1110 362C1208 308 1294 270 1390 228" stroke="url(#line)" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="500" cy="738" r="22" fill="#F5F5F7"/>
+  <circle cx="766" cy="580" r="22" fill="#F5F5F7"/>
+  <circle cx="1110" cy="362" r="22" fill="#F5F5F7"/>
+  <circle cx="1390" cy="228" r="22" fill="#F5F5F7"/>
+  <rect x="148" y="898" width="380" height="180" rx="28" fill="#151821" stroke="#2E3140"/>
+  <text x="196" y="976" fill="#8E98A8" font-family="Arial, sans-serif" font-size="22" letter-spacing="4">MARKETING OPS</text>
+  <text x="196" y="1040" fill="#F5F5F7" font-family="Arial, sans-serif" font-size="52" font-weight="700">20,908%</text>
+  <rect x="568" y="898" width="380" height="180" rx="28" fill="#151821" stroke="#2E3140"/>
+  <text x="616" y="976" fill="#8E98A8" font-family="Arial, sans-serif" font-size="22" letter-spacing="4">PARTNER BRANDS</text>
+  <text x="616" y="1040" fill="#F5F5F7" font-family="Arial, sans-serif" font-size="52" font-weight="700">190+</text>
+  <defs>
+    <linearGradient id="bg" x1="64" y1="72" x2="1536" y2="1208" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#151720"/>
+      <stop offset="1" stop-color="#101218"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1320 230) rotate(90) scale(220)">
+      <stop stop-color="#D946EF"/>
+      <stop offset="1" stop-color="#D946EF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(980 860) rotate(90) scale(240)">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#60A5FA" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="220" y1="876" x2="1390" y2="228" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F472B6"/>
+      <stop offset="1" stop-color="#60A5FA"/>
+    </linearGradient>
+  </defs>
+</svg>

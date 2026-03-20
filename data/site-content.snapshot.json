@@ -1,0 +1,358 @@
+{
+  "theme": {
+    "pageBackground": "#0b0b0d",
+    "pageBackgroundAccent": "#d946ef",
+    "pageBackgroundAccentSecondary": "#60a5fa",
+    "headerBackground": "#0b0b0d",
+    "sectionBackgroundHero": "#0b0b0d",
+    "sectionBackgroundSolutions": "#0d0d10",
+    "sectionBackgroundProducts": "#0b0b0d",
+    "sectionBackgroundMetrics": "#0d0d10",
+    "sectionBackgroundCaseStudy": "#0b0b0d",
+    "sectionBackgroundPartners": "#0d0d10",
+    "sectionBackgroundAbout": "#0b0b0d",
+    "sectionBackgroundContact": "#0d0d10",
+    "cardBackground": "#17171c",
+    "cardBorder": "#3f3f46",
+    "textPrimary": "#f5f5f7",
+    "textMuted": "#a1a1aa",
+    "accentFrom": "#d946ef",
+    "accentTo": "#8b5cf6",
+    "titleGradientFrom": "#f8fafc",
+    "titleGradientTo": "#60a5fa",
+    "logoGradientFrom": "#f0abfc",
+    "logoGradientTo": "#60a5fa",
+    "secondaryButtonBackground": "#18181b",
+    "secondaryButtonBorder": "#3f3f46"
+  },
+  "navigation": {
+    "items": [
+      {
+        "id": "nav-home",
+        "label": "HOME",
+        "href": "#home"
+      },
+      {
+        "id": "nav-who",
+        "label": "WHO WE ARE",
+        "href": "#who-we-are"
+      },
+      {
+        "id": "nav-platform",
+        "label": "OUR PLATFORM",
+        "href": "#our-platform"
+      },
+      {
+        "id": "nav-services",
+        "label": "OUR SERVICES",
+        "href": "#our-services"
+      },
+      {
+        "id": "nav-contact",
+        "label": "CONTACT",
+        "href": "#contact"
+      }
+    ],
+    "ctaLabel": "Contact",
+    "ctaHref": "#contact"
+  },
+  "hero": {
+    "eyebrow": "YCOMMA COMMERCE PLATFORM",
+    "title": "Think Like a Rocket",
+    "description": "빠르게 실행하고, 확실하게 성장시키는 커머스 부스팅 팀.",
+    "primaryCta": "drrip 입점 문의",
+    "primaryCtaHref": "#contact",
+    "secondaryCta": "서비스 소개 보기",
+    "secondaryCtaHref": "#our-services",
+    "slides": [
+      {
+        "id": "hero-slide-1773890607906-wsfpzm",
+        "buttonLabel": "YCOMMA",
+        "mediaType": "image",
+        "src": "/images/hero/hero-visual.svg",
+        "alt": "New hero slide"
+      }
+    ],
+    "imageSrc": "/images/hero-visual.svg",
+    "imageAlt": "YCOMMA hero business visual"
+  },
+  "solutions": {
+    "title": "브랜디 초기/하이버 성장의 주역이 만든 팀",
+    "description": "와이콤마는 빠르게 성장하는 커머스 팀이 어떤 방식으로 플랫폼과 서비스를 확장하는지 몸으로 겪어본 사람들이 모인 조직입니다.",
+    "teamIntro": "YCOMMA Works",
+    "highlights": [
+      {
+        "label": "IT service",
+        "value": "App / Web"
+      },
+      {
+        "label": "content",
+        "value": "커머셜 영상 제작"
+      },
+      {
+        "label": "mcn",
+        "value": "콜라보 상품 기획"
+      },
+      {
+        "label": "pop-up event",
+        "value": "오프라인 팝업"
+      }
+    ],
+    "values": [
+      {
+        "title": "결과로 증명하는 창업팀",
+        "description": "폭발적인 성장 DNA를 당신의 비즈니스에 이식합니다.\n단순한 조언이 아닌, 진짜 매출을 만드는 와이콤마와 함께하세요."
+      },
+      {
+        "title": "무(無)에서 유(有)",
+        "description": "맨바닥에서 500억 매출을 만들어낸 창업팀.\n스타트업다운 실행력으로 가장 치열하게 고민하고, 가장 확실하게 성장 시킵니다."
+      },
+      {
+        "title": "경험에 기반한 인사이트",
+        "description": "기획, 실행, 스케일업까지.\n실패와 성공을 모두 겪어본 진짜 창업가들이 당신의 비즈니스를 스케일업합니다."
+      },
+      {
+        "title": "압도적 실행력",
+        "description": "좋은 기획에서 멈추지 않고 빠른 실행과 반복으로 성과를 만듭니다."
+      }
+    ]
+  },
+  "products": {
+    "title": "커머스 인프라와 실전 운영 경험을 동시 제공",
+    "description": "",
+    "platforms": [
+      {
+        "name": "drrip",
+        "summary": "입점 브랜드가 빠르게 판매 성과를 만들 수 있도록 콘텐츠, 운영, CRM, 프로모션 실행을 한 흐름으로 연결합니다.",
+        "highlights": [
+          "패션/라이프스타일 중심 커머스 플랫폼",
+          "브랜드 입점과 판매 운영을 동시에 지원",
+          "콘텐츠와 전환 최적화를 연결하는 구조"
+        ],
+        "imageSrc": "/images/platforms/drrip-overview.svg",
+        "imageAlt": "drrip platform preview"
+      },
+      {
+        "name": "Penguin Board",
+        "summary": "커머스 운영 관리 SaaS 솔루션",
+        "highlights": [
+          "플랫폼별 가격 모니터링",
+          "플랫폼별 프로모션 캘린더",
+          "상품별 마진 모니터링",
+          "시즌별 상품 판매량 아카이빙"
+        ],
+        "imageSrc": "/images/platforms/penguin-overview.svg",
+        "imageAlt": "New platform image"
+      }
+    ],
+    "platformName": "drrip",
+    "platformSummary": "입점 브랜드가 빠르게 판매 성과를 만들 수 있도록 콘텐츠, 운영, CRM, 프로모션 실행을 한 흐름으로 연결합니다.",
+    "highlights": [
+      "패션/라이프스타일 중심 커머스 플랫폼",
+      "브랜드 입점과 판매 운영을 동시에 지원",
+      "콘텐츠와 전환 최적화를 연결하는 구조"
+    ]
+  },
+  "metrics": {
+    "title": "강력한 인프라 수치가 플랫폼의 신뢰를 증명합니다",
+    "description": "운영 규모와 사용자 반응, 파트너 네트워크를 한눈에 보여주는 핵심 지표입니다.",
+    "items": [
+      {
+        "label": "MAU",
+        "value": "120,000+"
+      },
+      {
+        "label": "Downloads",
+        "value": "95,000+"
+      },
+      {
+        "label": "Accounts",
+        "value": "70,000+"
+      },
+      {
+        "label": "Partner",
+        "value": "190+"
+      }
+    ]
+  },
+  "caseStudy": {
+    "title": "YCOMMA 성공 사례",
+    "description": "",
+    "stories": [
+      {
+        "brand": "호주 어그",
+        "growth": "20,908%",
+        "note": "입점 이후 가파른 매출 성장과 콘텐츠 노출 최적화 사례"
+      },
+      {
+        "brand": "리끌로우",
+        "growth": "11,128%",
+        "note": "프로모션 구조와 재구매 유도 설계로 전환율을 극대화한 사례"
+      },
+      {
+        "brand": "아티드",
+        "growth": "10,957%",
+        "note": "상품 기획과 브랜딩 메시지 정교화로 폭발적 성장을 만든 사례"
+      }
+    ]
+  },
+  "partners": {
+    "title": "투자와 제도권 검증으로 신뢰를 확보한 팀",
+    "description": "투자와 제도권의 선택을 통해, 우리의 실행력과 성장 가능성을 증명해왔습니다.",
+    "milestones": [
+      {
+        "label": "투자 유치",
+        "title": "본엔젤스벤처파트너스",
+        "detail": "초기 투자 유치를 통해 와이콤마의 성장 가능성과 팀 역량을 검증받았습니다."
+      },
+      {
+        "label": "투자 유치",
+        "title": "슈미트",
+        "detail": "커머스 실행력과 시장 확장성을 인정받아 후속 성장 기반을 마련했습니다."
+      },
+      {
+        "label": "TIPS 선정",
+        "title": "중소벤처기업부 TIPS",
+        "detail": "최대 7억 원 규모의 지원 확보로 기술과 사업 확장 기반을 강화했습니다."
+      },
+      {
+        "label": "스타일테크 유망기업 7기 선정",
+        "title": "한국디자인진흥원 스타일테크",
+        "detail": "패션·뷰티 산업과 디지털 기술이 결합한 차세대 성장 분야로 인정받았습니다."
+      }
+    ]
+  },
+  "about": {
+    "title": "당신의 비즈니스를 위한 All-Round 파트너",
+    "description": "플랫폼 운영 경험을 바탕으로 마케팅, 개발, 세일즈 자료 제작까지 B2B 실행 서비스를 제공합니다.",
+    "services": [
+      {
+        "name": "마케팅 대행",
+        "summary": "숏폼, 바이럴, 퍼포먼스 중심으로 빠르게 전환을 만드는 마케팅 실행",
+        "images": [
+          {
+            "src": "/images/services/service-marketing-1.svg",
+            "alt": "Marketing service showcase 1"
+          },
+          {
+            "src": "/images/services/service-marketing-2.svg",
+            "alt": "Marketing service showcase 2"
+          }
+        ]
+      },
+      {
+        "name": "개발 외주",
+        "summary": "맞춤형 커머스 앱과 서비스 구축을 위한 설계 및 개발",
+        "images": [
+          {
+            "src": "/images/services/service-development-1.svg",
+            "alt": "Development service showcase 1"
+          },
+          {
+            "src": "/images/services/service-development-2.svg",
+            "alt": "Development service showcase 2"
+          }
+        ]
+      },
+      {
+        "name": "소개서 / 기획전 제작",
+        "summary": "스토리텔링형 상세페이지와 영업용 제안 자료, 기획전 제작",
+        "images": [
+          {
+            "src": "/images/services/service-deck-1.svg",
+            "alt": "Deck service showcase 1"
+          },
+          {
+            "src": "/images/services/service-deck-2.svg",
+            "alt": "Deck service showcase 2"
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "문제 해결의 시작점은 소통입니다",
+    "description": "브랜드 입점부터 마케팅 대행, 개발 외주, 소개서 제작 문의까지 빠르게 응대할 수 있도록 설계합니다.",
+    "inquiryOptions": [
+      "drrip 입점 문의",
+      "마케팅 대행 문의",
+      "개발 외주 문의",
+      "소개서 제작 문의"
+    ],
+    "formCtaLabel": "문의 남기기",
+    "formCtaHref": "mailto:contact@ycomma.com",
+    "footer": {
+      "ceo": "김현중, 선종석",
+      "address": "서울창업허브 공덕 별관 418호",
+      "email": "contact@ycomma.co.kr",
+      "phone": "070-7602-9000",
+      "links": []
+    }
+  },
+  "news": {
+    "title": "News & Contents",
+    "description": "",
+    "items": [
+      {
+        "title": "시티브리즈-아티드, '드립(drrip) 입점",
+        "summary": "패션 큐레이션 플랫폼 드립(drrip)을 운영하는 와이콤마(대표 선종석,김현중)는 국내 대표 패션기업 이스트엔드(대표 김동진)가 전개하...",
+        "source": "이코노미스트",
+        "date": "2026.03.01",
+        "imageSrc": "https://economist.co.kr/data/ecn/image/2026/01/06/ecn20260106000044.800x.0.jpg",
+        "imageAlt": "시티브리즈&middot;아티드, 패션 큐레이션 플랫폼 &lsquo;드립(drrip)&rsquo; 입점",
+        "href": "https://economist.co.kr/article/view/ecn202601060046"
+      },
+      {
+        "title": "6개월 만에 이월 재고 50% 소진! 신규 플랫폼 드립 화제 ",
+        "summary": "유니크한 패션 아이템을 선보이는 '리끌로우'는 최근 드립(drrip)이라는 패션 큐레이션 아울렛 플랫폼에 입점했는데, 6개월 만에 8000개의 재고를...",
+        "source": "fashionbiz.co.kr",
+        "date": "2025.09.11",
+        "imageSrc": "https://www.fashionbiz.co.kr/images/articleImg/mainImg/1757500149824-%EA%B8%B0%EC%82%AC%20%EB%A9%94%EC%9D%B8%EC%9D%B4%EB%AF%B8%EC%A7%80.jpg",
+        "imageAlt": "6개월 만에 이월 재고 50% 소진! 신규 플랫폼 &#x27;드립&#x27; 화제 ",
+        "href": "https://fashionbiz.co.kr/article/219471"
+      },
+      {
+        "title": "패션 큐레이션 아울렛 드립 운영사 와이콤마, 스타일테크 유망기업 선정 - 플래텀",
+        "summary": "패션 큐레이션 아울렛 플랫폼 드립(drrip)을 운영하는 와이콤마가 산업통상자원부와 한국디자인진흥원의 스타일테크 유망기업 7기에 선정됐다.",
+        "source": "스타트업 생태계의 모든 것 \\&#039;플래텀(Platum)\\&#039;",
+        "date": "2025.06.24",
+        "imageSrc": "https://cdn.platum.kr/wp-content/uploads/2025/06/77.jpg",
+        "imageAlt": "패션 큐레이션 아울렛 &#039;드립&#039; 운영사 와이콤마, 스타일테크 유망기업 선정 - 플래텀",
+        "href": "https://platum.kr/archives/264104"
+      },
+      {
+        "title": "MZ 패션 아울렛 플랫폼 ‘드립(drrip)’, 본엔젤스로부터 시드투자 유치 ",
+        "summary": "MZ 패션 아울렛 플랫폼 ‘드립(drrip)’ 런칭을 준비 중인 와이콤마(대표 선종석·김현중)가 본엔젤스벤처파트너스로부터 시드투자를 유치했다고 13일 밝혔다...",
+        "source": "데일리안",
+        "date": "2024.08.13",
+        "imageSrc": "https://cdnimage.dailian.co.kr/news/202408/news_1723447332_1395172_m_1.jpeg",
+        "imageAlt": "MZ 패션 아울렛 플랫폼 ‘드립(drrip)’, 본엔젤스로부터 시드투자 유치 ",
+        "href": "https://www.dailian.co.kr/news/view/1395172/MZ-%ED%8C%A8%EC%85%98-%EC%95%84%EC%9A%B8%EB%A0%9B-%ED%94%8C%EB%9E%AB%ED%8F%BC-%E2%80%98%EB%93%9C%EB%A6%BDdrr-2024"
+      }
+    ]
+  },
+  "content": {
+    "items": [
+      {
+        "title": "드랍바이서울 성수 오프라인 팝업",
+        "imageSrc": "/images/content/content-5.jpg"
+      },
+      {
+        "title": "drop by drrip EVENT Vol.2",
+        "imageSrc": "/images/content/content-4.jpg"
+      },
+      {
+        "title": "drop by drrip Event Vol.1",
+        "imageSrc": "/images/content/content-3.jpg"
+      },
+      {
+        "title": "drop by drrip Event Vol.1",
+        "imageSrc": "/images/content/content-2.jpg"
+      },
+      {
+        "title": "드립X스퀘어라인 한남동 팝업",
+        "imageSrc": "/images/content/content-1.jpg"
+      }
+    ]
+  }
+}

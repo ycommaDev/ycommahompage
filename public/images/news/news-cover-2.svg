@@ -1,0 +1,48 @@
+<svg width="1600" height="1280" viewBox="0 0 1600 1280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1280" rx="48" fill="#0F1014"/>
+  <rect x="64" y="72" width="1472" height="1136" rx="40" fill="url(#bg)"/>
+  <circle cx="1240" cy="270" r="220" fill="url(#glowA)" fill-opacity="0.8"/>
+  <circle cx="340" cy="270" r="170" fill="url(#glowB)" fill-opacity="0.5"/>
+  <rect x="144" y="200" width="640" height="520" rx="28" fill="#181A20" stroke="#2E3140"/>
+  <text x="208" y="318" fill="#F5F5F7" font-family="Arial, sans-serif" font-size="64" font-weight="700">YCOMMA</text>
+  <text x="208" y="404" fill="#F5F5F7" font-family="Arial, sans-serif" font-size="84" font-weight="800">Content</text>
+  <text x="208" y="492" fill="#F5F5F7" font-family="Arial, sans-serif" font-size="84" font-weight="800">Commerce</text>
+  <text x="208" y="568" fill="#8E98A8" font-family="Arial, sans-serif" font-size="28">Short-form, curation, and conversion planning.</text>
+  <rect x="930" y="246" width="210" height="210" rx="28" fill="url(#cardA)"/>
+  <rect x="1172" y="246" width="210" height="210" rx="28" fill="url(#cardB)"/>
+  <rect x="930" y="488" width="210" height="210" rx="28" fill="url(#cardC)"/>
+  <rect x="1172" y="488" width="210" height="210" rx="28" fill="url(#cardD)"/>
+  <rect x="144" y="828" width="1312" height="176" rx="28" fill="#14161D" stroke="#2E3140"/>
+  <text x="208" y="900" fill="#8E98A8" font-family="Arial, sans-serif" font-size="22" letter-spacing="4">COMMERCE STRUCTURE</text>
+  <text x="208" y="956" fill="#F5F5F7" font-family="Arial, sans-serif" font-size="48" font-weight="700">Brand x Content x Conversion</text>
+  <defs>
+    <linearGradient id="bg" x1="64" y1="72" x2="1536" y2="1208" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#161822"/>
+      <stop offset="1" stop-color="#11131A"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1240 270) rotate(90) scale(220)">
+      <stop stop-color="#D946EF"/>
+      <stop offset="1" stop-color="#D946EF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(340 270) rotate(90) scale(170)">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#60A5FA" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cardA" x1="930" y1="246" x2="1140" y2="456" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D946EF"/>
+      <stop offset="1" stop-color="#60A5FA"/>
+    </linearGradient>
+    <linearGradient id="cardB" x1="1172" y1="246" x2="1382" y2="456" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#60A5FA"/>
+    </linearGradient>
+    <linearGradient id="cardC" x1="930" y1="488" x2="1140" y2="698" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F472B6"/>
+      <stop offset="1" stop-color="#60A5FA"/>
+    </linearGradient>
+    <linearGradient id="cardD" x1="1172" y1="488" x2="1382" y2="698" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,17 @@
+<svg width="1600" height="700" viewBox="0 0 1600 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="700" rx="32" fill="#12131A"/>
+  <rect x="48" y="48" width="1504" height="604" rx="28" fill="url(#bg)"/>
+  <text x="120" y="210" fill="#F5F5F7" font-family="Arial, sans-serif" font-size="34" font-weight="700">DECK / PROMOTION</text>
+  <text x="120" y="320" fill="#F5F5F7" font-family="Arial, sans-serif" font-size="88" font-weight="800">Storytelling</text>
+  <text x="120" y="408" fill="#F5F5F7" font-family="Arial, sans-serif" font-size="88" font-weight="800">Pages</text>
+  <rect x="1010" y="138" width="320" height="424" rx="24" fill="#F5F5F7"/>
+  <rect x="1060" y="194" width="220" height="20" rx="10" fill="#D946EF"/>
+  <rect x="1060" y="244" width="178" height="14" rx="7" fill="#D1D5DB"/>
+  <rect x="1060" y="276" width="200" height="14" rx="7" fill="#D1D5DB"/>
+  <defs>
+    <linearGradient id="bg" x1="48" y1="48" x2="1552" y2="652" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#171923"/>
+      <stop offset="1" stop-color="#10131A"/>
+    </linearGradient>
+  </defs>
+</svg>

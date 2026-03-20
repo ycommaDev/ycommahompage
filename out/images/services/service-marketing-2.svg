@@ -1,0 +1,19 @@
+<svg width="1600" height="700" viewBox="0 0 1600 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="700" rx="32" fill="#12131A"/>
+  <rect x="48" y="48" width="1504" height="604" rx="28" fill="url(#bg)"/>
+  <circle cx="1320" cy="510" r="210" fill="url(#glow)"/>
+  <text x="120" y="210" fill="#F5F5F7" font-family="Arial, sans-serif" font-size="34" font-weight="700">VIRAL EXECUTION</text>
+  <text x="120" y="320" fill="#F5F5F7" font-family="Arial, sans-serif" font-size="88" font-weight="800">Creator</text>
+  <text x="120" y="408" fill="#F5F5F7" font-family="Arial, sans-serif" font-size="88" font-weight="800">Momentum</text>
+  <text x="120" y="472" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="28">Story-led hooks designed for conversion velocity.</text>
+  <defs>
+    <linearGradient id="bg" x1="48" y1="48" x2="1552" y2="652" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#171923"/>
+      <stop offset="1" stop-color="#0F1016"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1320 510) rotate(90) scale(210)">
+      <stop stop-color="#60A5FA" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#60A5FA" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
