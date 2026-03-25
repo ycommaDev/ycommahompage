@@ -106,6 +106,10 @@ function normalizeSiteContent(raw: unknown): SiteContent {
           highlights: Array.isArray(platform?.highlights)
             ? platform.highlights.filter(Boolean)
             : [],
+          href:
+            typeof platform?.href === "string"
+              ? platform.href
+              : fallbackPlatform.href,
           imageSrc: normalizeAssetPath(platform?.imageSrc || fallbackPlatform.imageSrc),
           imageAlt: platform?.imageAlt || `${platform?.name || "Platform"} image`,
         }))
@@ -116,6 +120,7 @@ function normalizeSiteContent(raw: unknown): SiteContent {
             highlights: Array.isArray(parsed.products?.highlights)
               ? parsed.products.highlights.filter(Boolean)
               : fallbackPlatform.highlights,
+            href: fallbackPlatform.href,
             imageSrc: normalizeAssetPath(fallbackPlatform.imageSrc),
             imageAlt: fallbackPlatform.imageAlt,
           },
@@ -233,6 +238,10 @@ function normalizeSiteContent(raw: unknown): SiteContent {
         ? parsed.about.services.map((service, index) => ({
             ...initialSiteContent.about.services[index % initialSiteContent.about.services.length],
             ...service,
+            href:
+              typeof service?.href === "string"
+                ? service.href
+                : initialSiteContent.about.services[index % initialSiteContent.about.services.length]?.href ?? "#",
             images: Array.isArray(service?.images)
               ? service.images.filter(Boolean).map((image) => ({
                   ...image,

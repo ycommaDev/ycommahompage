@@ -84,12 +84,6 @@ export function SitePreview({ content }: SitePreviewProps) {
       label: "drrip 입점 신청",
       href: "https://seller.drrip.co.kr",
     };
-  const footerQuickLinks = [instagramLink, sellerLink].filter(
-    (link, index, links) =>
-      links.findIndex(
-        (item) => item.label === link.label && item.href === link.href,
-      ) === index,
-  );
   const contactTitle = withFallback(content.contact.title, "Contact Us");
   const contactDescription = withFallback(
     content.contact.description,
@@ -411,18 +405,10 @@ export function SitePreview({ content }: SitePreviewProps) {
         <div className="grid gap-6">
           {content.products.platforms.map((platform, index) => (
             <div key={`${platform.name}-${index}`} className="space-y-4">
-              <CardSurface
-                theme={theme}
-                className="overflow-hidden p-0"
-                style={{
-                  background: `linear-gradient(145deg, ${toRgba(theme.accentFrom, 0.08)}, ${toRgba(theme.accentTo, 0.05)}), ${toRgba(theme.cardBackground, 0.92)}`,
-                }}
-              >
-                <div className="grid xl:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)]">
-                  <div
-                    className="relative min-h-[260px] overflow-hidden sm:min-h-[340px] xl:min-h-[520px]"
-                    style={{ backgroundColor: toRgba(theme.pageBackground, 0.34) }}
-                  >
+              {(() => {
+                const hasPlatformLink = Boolean(platform.href && platform.href !== "#");
+                const platformMedia = (
+                  <>
                     <Image
                       src={platform.imageSrc}
                       alt={platform.imageAlt}
@@ -431,7 +417,52 @@ export function SitePreview({ content }: SitePreviewProps) {
                       sizes="(max-width: 1280px) 100vw, 820px"
                       className="object-contain sm:object-cover"
                     />
-                  </div>
+                    {hasPlatformLink ? (
+                      <span
+                        className="absolute right-4 top-4 inline-flex h-11 w-11 items-center justify-center rounded-full border backdrop-blur-sm transition-transform duration-200 sm:h-12 sm:w-12"
+                        style={{
+                          borderColor: toRgba(theme.cardBorder, 0.55),
+                          backgroundColor: toRgba(theme.pageBackground, 0.52),
+                          color: theme.textPrimary,
+                        }}
+                      >
+                        <svg viewBox="0 0 24 24" className="h-4 w-4 sm:h-5 sm:w-5" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                          <path d="M7 17 17 7" />
+                          <path d="M9 7h8v8" />
+                        </svg>
+                      </span>
+                    ) : null}
+                  </>
+                );
+
+                return (
+              <CardSurface
+                theme={theme}
+                className="overflow-hidden p-0"
+                style={{
+                  background: `linear-gradient(145deg, ${toRgba(theme.accentFrom, 0.08)}, ${toRgba(theme.accentTo, 0.05)}), ${toRgba(theme.cardBackground, 0.92)}`,
+                }}
+              >
+                <div className="grid xl:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)]">
+                  {hasPlatformLink ? (
+                    <a
+                      href={platform.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${platform.name} link`}
+                      className="group relative block min-h-[260px] overflow-hidden sm:min-h-[340px] xl:min-h-[520px]"
+                      style={{ backgroundColor: toRgba(theme.pageBackground, 0.34) }}
+                    >
+                      {platformMedia}
+                    </a>
+                  ) : (
+                    <div
+                      className="relative min-h-[260px] overflow-hidden sm:min-h-[340px] xl:min-h-[520px]"
+                      style={{ backgroundColor: toRgba(theme.pageBackground, 0.34) }}
+                    >
+                      {platformMedia}
+                    </div>
+                  )}
 
                   <div className="flex flex-col justify-between gap-8 p-7 sm:p-9">
                     <div>
@@ -464,6 +495,8 @@ export function SitePreview({ content }: SitePreviewProps) {
                   </div>
                 </div>
               </CardSurface>
+                );
+              })()}
 
               {metricGroups[index] && metricGroups[index].length > 0 ? (
                 <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -589,33 +622,6 @@ export function SitePreview({ content }: SitePreviewProps) {
             </div>
           </CardSurface>
 
-          <a href={instagramLink.href} target="_blank" rel="noreferrer">
-            <CardSurface theme={theme} className="h-full transition hover:border-white/30" style={{ backgroundColor: toRgba(theme.cardBackground, 0.34) }}>
-              <div className="flex items-start gap-4">
-                <ContactIcon theme={theme} type="instagram" />
-                <div>
-                  <p className="text-xs uppercase tracking-[0.14em]" style={{ color: theme.textMuted }}>
-                    Instagram
-                  </p>
-                  <p className="mt-3 text-lg font-semibold tracking-[-0.02em]">drrip.official</p>
-                </div>
-              </div>
-            </CardSurface>
-          </a>
-
-          <a href={sellerLink.href} target="_blank" rel="noreferrer">
-            <CardSurface theme={theme} className="h-full transition hover:border-white/30" style={{ backgroundColor: toRgba(theme.cardBackground, 0.34) }}>
-              <div className="flex items-start gap-4">
-                <ContactIcon theme={theme} type="link" />
-                <div>
-                  <p className="text-xs uppercase tracking-[0.14em]" style={{ color: theme.textMuted }}>
-                    Seller
-                  </p>
-                  <p className="mt-3 text-lg font-semibold tracking-[-0.02em]">drrip 입점 신청</p>
-                </div>
-              </div>
-            </CardSurface>
-          </a>
         </div>
       </SectionShell>
 
@@ -754,24 +760,6 @@ export function SitePreview({ content }: SitePreviewProps) {
           <div>
             <p>{footerEmail}</p>
             <p className="mt-2">{footerPhone}</p>
-            <div className="mt-4 flex flex-wrap gap-3">
-              {footerQuickLinks.map((link, index) => (
-                <a
-                  key={`${link.label}-${link.href}-${index}`}
-                  href={link.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-full border px-3 py-2 text-xs"
-                  style={{
-                    borderColor: toRgba(theme.cardBorder, 0.45),
-                    backgroundColor: toRgba(theme.cardBackground, 0.35),
-                    color: theme.textPrimary,
-                  }}
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
           </div>
         </div>
       </footer>
@@ -877,14 +865,8 @@ function ServiceMediaCarousel({
     return () => window.clearInterval(timer);
   }, [slides.length]);
 
-  return (
-    <div
-      className="overflow-hidden rounded-[22px] border"
-      style={{
-        borderColor: toRgba(theme.cardBorder, 0.45),
-        backgroundColor: toRgba(theme.cardBackground, 0.24),
-      }}
-    >
+  const mediaContent = (
+    <>
       <div
         className="relative aspect-[16/7] w-full overflow-hidden sm:aspect-[16/6]"
         style={{ backgroundColor: toRgba(theme.pageBackground, 0.34) }}
@@ -925,6 +907,18 @@ function ServiceMediaCarousel({
           ))}
         </div>
       ) : null}
+    </>
+  );
+
+  return (
+    <div
+      className="overflow-hidden rounded-[22px] border"
+      style={{
+        borderColor: toRgba(theme.cardBorder, 0.45),
+        backgroundColor: toRgba(theme.cardBackground, 0.24),
+      }}
+    >
+      {mediaContent}
     </div>
   );
 }

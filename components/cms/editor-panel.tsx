@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from "react";
+﻿import { useEffect, useState, type ReactNode } from "react";
 import type { CmsPanelKey, SiteContent } from "@/types/site-content";
 
 interface EditorPanelProps {
@@ -36,11 +36,11 @@ export function EditorPanel({
   const fetchNewsMetadata = async (index: number) => {
     const item = content.news.items[index];
     if (!item?.href) {
-      setNewsFetchState((current) => ({ ...current, [index]: "URL을 먼저 입력해주세요." }));
+      setNewsFetchState((current) => ({ ...current, [index]: "URL??癒쇱? ?낅젰?댁＜?몄슂." }));
       return;
     }
 
-    setNewsFetchState((current) => ({ ...current, [index]: "기사 정보를 가져오는 중..." }));
+    setNewsFetchState((current) => ({ ...current, [index]: "湲곗궗 ?뺣낫瑜?媛?몄삤??以?.." }));
 
     try {
       const response = await fetch("/api/news-metadata", {
@@ -59,7 +59,7 @@ export function EditorPanel({
       };
 
       if (!response.ok) {
-        throw new Error(payload.error || "기사 정보를 가져오지 못했습니다.");
+        throw new Error(payload.error || "湲곗궗 ?뺣낫瑜?媛?몄삤吏 紐삵뻽?듬땲??");
       }
 
       const nextItems = [...content.news.items];
@@ -72,11 +72,11 @@ export function EditorPanel({
       };
 
       onChange({ ...content, news: { ...content.news, items: nextItems } });
-      setNewsFetchState((current) => ({ ...current, [index]: "기사 정보를 가져왔습니다." }));
+      setNewsFetchState((current) => ({ ...current, [index]: "湲곗궗 ?뺣낫瑜?媛?몄솕?듬땲??" }));
     } catch (error) {
       setNewsFetchState((current) => ({
         ...current,
-        [index]: error instanceof Error ? error.message : "기사 정보를 가져오지 못했습니다.",
+        [index]: error instanceof Error ? error.message : "湲곗궗 ?뺣낫瑜?媛?몄삤吏 紐삵뻽?듬땲??",
       }));
     }
   };
@@ -607,6 +607,7 @@ export function EditorPanel({
                         name: "New Platform",
                         summary: "Add platform summary",
                         highlights: ["New highlight"],
+                        href: "#",
                         imageSrc: "/images/platforms/drrip-overview.svg",
                         imageAlt: "New platform image",
                       },
@@ -651,6 +652,15 @@ export function EditorPanel({
                 onChange={(value) => {
                   const nextPlatforms = [...content.products.platforms];
                   nextPlatforms[index] = { ...platform, summary: value };
+                  onChange({ ...content, products: { ...content.products, platforms: nextPlatforms } });
+                }}
+              />
+              <Field
+                label="Platform URL"
+                value={platform.href ?? "#"}
+                onChange={(value) => {
+                  const nextPlatforms = [...content.products.platforms];
+                  nextPlatforms[index] = { ...platform, href: value };
                   onChange({ ...content, products: { ...content.products, platforms: nextPlatforms } });
                 }}
               />
@@ -908,6 +918,7 @@ export function EditorPanel({
                       {
                         name: "New Service",
                         summary: "Add service summary",
+                        href: "#",
                         images: [{ src: "/images/services/service-marketing-1.webp", alt: "New service image" }],
                       },
                     ],
@@ -1084,70 +1095,6 @@ export function EditorPanel({
                   },
                 })
               }
-            />
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            <Field
-              label="Instagram Label"
-              value={content.contact.footer.links[0]?.label ?? "Instagram"}
-              onChange={(value) => {
-                const nextLinks = [...content.contact.footer.links];
-                nextLinks[0] = { label: value, href: nextLinks[0]?.href ?? "https://www.instagram.com/drrip.official" };
-                onChange({
-                  ...content,
-                  contact: {
-                    ...content.contact,
-                    footer: { ...content.contact.footer, links: nextLinks },
-                  },
-                });
-              }}
-            />
-            <Field
-              label="Instagram Href"
-              value={content.contact.footer.links[0]?.href ?? "https://www.instagram.com/drrip.official"}
-              onChange={(value) => {
-                const nextLinks = [...content.contact.footer.links];
-                nextLinks[0] = { label: nextLinks[0]?.label ?? "Instagram", href: value };
-                onChange({
-                  ...content,
-                  contact: {
-                    ...content.contact,
-                    footer: { ...content.contact.footer, links: nextLinks },
-                  },
-                });
-              }}
-            />
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            <Field
-              label="Seller Label"
-              value={content.contact.footer.links[1]?.label ?? "drrip 입점 신청"}
-              onChange={(value) => {
-                const nextLinks = [...content.contact.footer.links];
-                nextLinks[1] = { label: value, href: nextLinks[1]?.href ?? "https://seller.drrip.co.kr" };
-                onChange({
-                  ...content,
-                  contact: {
-                    ...content.contact,
-                    footer: { ...content.contact.footer, links: nextLinks },
-                  },
-                });
-              }}
-            />
-            <Field
-              label="Seller Href"
-              value={content.contact.footer.links[1]?.href ?? "https://seller.drrip.co.kr"}
-              onChange={(value) => {
-                const nextLinks = [...content.contact.footer.links];
-                nextLinks[1] = { label: nextLinks[1]?.label ?? "drrip 입점 신청", href: value };
-                onChange({
-                  ...content,
-                  contact: {
-                    ...content.contact,
-                    footer: { ...content.contact.footer, links: nextLinks },
-                  },
-                });
-              }}
             />
           </div>
         </div>
@@ -1337,7 +1284,7 @@ export function EditorPanel({
         <div className="space-y-4">
           <PanelHeader
             title="Footer Content"
-            description="Edit company information and footer links shown at the bottom of the homepage."
+            description="Edit the company information shown at the bottom of the homepage."
           />
           <div className="grid gap-4 md:grid-cols-2">
             <TextAreaField
@@ -1393,77 +1340,6 @@ export function EditorPanel({
               })
             }
           />
-          <div className="flex justify-end">
-            <SmallButton
-              onClick={() =>
-                onChange({
-                  ...content,
-                  contact: {
-                    ...content.contact,
-                    footer: {
-                      ...content.contact.footer,
-                      links: [...content.contact.footer.links, { label: "New Footer Link", href: "#" }],
-                    },
-                  },
-                })
-              }
-            >
-              + Add Link
-            </SmallButton>
-          </div>
-          {content.contact.footer.links.map((link, index) => (
-            <PanelBlock key={`footer-link-${index}`}>
-              <div className="flex justify-end">
-                <SmallButton
-                  destructive
-                  onClick={() =>
-                    onChange({
-                      ...content,
-                      contact: {
-                        ...content.contact,
-                        footer: {
-                          ...content.contact.footer,
-                          links: content.contact.footer.links.filter((_, itemIndex) => itemIndex !== index),
-                        },
-                      },
-                    })
-                  }
-                >
-                  Delete
-                </SmallButton>
-              </div>
-              <TextAreaField
-                label={`Footer Link ${index + 1} Label`}
-                value={link.label}
-                onChange={(value) => {
-                  const nextLinks = [...content.contact.footer.links];
-                  nextLinks[index] = { ...link, label: value };
-                  onChange({
-                    ...content,
-                    contact: {
-                      ...content.contact,
-                      footer: { ...content.contact.footer, links: nextLinks },
-                    },
-                  });
-                }}
-              />
-              <Field
-                label="Footer Link Href"
-                value={link.href}
-                onChange={(value) => {
-                  const nextLinks = [...content.contact.footer.links];
-                  nextLinks[index] = { ...link, href: value };
-                  onChange({
-                    ...content,
-                    contact: {
-                      ...content.contact,
-                      footer: { ...content.contact.footer, links: nextLinks },
-                    },
-                  });
-                }}
-              />
-            </PanelBlock>
-          ))}
         </div>
       )}
     </section>

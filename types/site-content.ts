@@ -89,6 +89,7 @@ export interface ProductsSection {
     name: string;
     summary: string;
     highlights: string[];
+    href: string;
     imageSrc: string;
     imageAlt: string;
   }>;
@@ -133,6 +134,7 @@ export interface AboutSection {
   services: Array<{
     name: string;
     summary: string;
+    href: string;
     images: Array<{
       src: string;
       alt: string;
