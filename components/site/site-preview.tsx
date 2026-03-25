@@ -169,14 +169,8 @@ export function SitePreview({ content }: SitePreviewProps) {
         style={{ backgroundColor: theme.sectionBackgroundHero }}
       >
         <div className="mx-auto w-full max-w-[1220px]">
-          <CardSurface
-            theme={theme}
-            className="relative mt-2 w-full overflow-hidden rounded-[34px] p-0"
-            style={{
-              background: `linear-gradient(160deg, ${toRgba(theme.cardBackground, 0.92)}, ${toRgba(theme.pageBackground, 0.95)})`,
-            }}
-          >
-            <div className="relative aspect-[5/4] w-full">
+          <div className="relative mt-2 w-full overflow-hidden rounded-[24px] sm:rounded-[34px]">
+            <div className="relative aspect-[4/3] w-full sm:aspect-[5/4]">
               <div className="absolute left-4 right-4 top-4 z-10 flex flex-wrap gap-2 sm:left-5 sm:right-5 sm:top-5">
                 {heroSlides.map((slide, index) => (
                   <button
@@ -216,7 +210,7 @@ export function SitePreview({ content }: SitePreviewProps) {
                       loop
                       playsInline
                       preload="auto"
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-contain sm:object-cover"
                     />
                   ) : (
                     <Image
@@ -225,7 +219,7 @@ export function SitePreview({ content }: SitePreviewProps) {
                       fill
                       priority={index === 0}
                       sizes="(max-width: 1280px) 100vw, 660px"
-                      className="object-cover"
+                      className="object-contain sm:object-cover"
                     />
                   )}
                 </div>
@@ -237,7 +231,7 @@ export function SitePreview({ content }: SitePreviewProps) {
                 }}
               />
             </div>
-          </CardSurface>
+          </div>
 
           <div className="mt-12 flex flex-col items-center text-center">
             <h1 className="max-w-[14ch] text-[clamp(3rem,8vw,6.2rem)] font-semibold leading-[0.92] tracking-[-0.04em] break-keep">
@@ -390,13 +384,16 @@ export function SitePreview({ content }: SitePreviewProps) {
                 }}
               >
                 <div className="grid xl:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)]">
-                  <div className="relative min-h-[340px] overflow-hidden xl:min-h-[520px]">
+                  <div
+                    className="relative min-h-[260px] overflow-hidden sm:min-h-[340px] xl:min-h-[520px]"
+                    style={{ backgroundColor: toRgba(theme.pageBackground, 0.34) }}
+                  >
                     <Image
                       src={platform.imageSrc}
                       alt={platform.imageAlt}
                       fill
                       sizes="(max-width: 1280px) 100vw, 820px"
-                      className="object-cover"
+                      className="object-contain sm:object-cover"
                     />
                   </div>
 
@@ -709,13 +706,16 @@ export function SitePreview({ content }: SitePreviewProps) {
                   className="w-[min(76vw,420px)] shrink-0 snap-start overflow-hidden p-0"
                   style={{ backgroundColor: toRgba(theme.cardBackground, 0.34) }}
                 >
-                  <div className="relative aspect-[4/5] w-full">
+                  <div
+                    className="relative aspect-[4/5] w-full"
+                    style={{ backgroundColor: toRgba(theme.pageBackground, 0.34) }}
+                  >
                     <Image
                       src={item.imageSrc}
                       alt={item.title}
                       fill
                       sizes="(max-width: 1280px) 76vw, 420px"
-                      className="object-cover"
+                      className="object-contain sm:object-cover"
                     />
                     <div
                       className="absolute inset-x-0 bottom-0 p-5"
@@ -882,7 +882,10 @@ function ServiceMediaCarousel({
         backgroundColor: toRgba(theme.cardBackground, 0.24),
       }}
     >
-      <div className="relative aspect-[16/6] w-full overflow-hidden">
+      <div
+        className="relative aspect-[16/7] w-full overflow-hidden sm:aspect-[16/6]"
+        style={{ backgroundColor: toRgba(theme.pageBackground, 0.34) }}
+      >
         {slides.map((image, index) => (
           <div
             key={`${image.src}-${index}`}
@@ -894,7 +897,7 @@ function ServiceMediaCarousel({
               alt={image.alt}
               fill
               sizes="(max-width: 1280px) 100vw, 420px"
-              className="object-cover"
+              className="object-contain sm:object-cover"
             />
           </div>
         ))}
