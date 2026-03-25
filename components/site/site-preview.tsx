@@ -900,7 +900,7 @@ function ServiceMediaCarousel({
               alt={image.alt}
               fill
               quality={100}
-              sizes="(max-width: 1280px) 100vw, 420px"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 92vw, (max-width: 1440px) 78vw, 960px"
               className="object-contain sm:object-cover"
             />
           </div>
@@ -1070,11 +1070,13 @@ function MiniStat({
         borderColor: toRgba(theme.cardBorder, 0.45),
         backgroundColor: toRgba(theme.cardBackground, 0.35),
       }}
-    >
-      <p className="text-xs uppercase tracking-[0.16em]" style={{ color: theme.textMuted }}>
-        {label}
+      >
+        <p className="text-xs uppercase tracking-[0.16em]" style={{ color: theme.textMuted }}>
+          {label}
+        </p>
+      <p className="mt-3 text-[clamp(1.24rem,2.4vw,1.56rem)] font-semibold leading-[1.08]">
+        {renderMultilineText(value)}
       </p>
-      <p className="mt-3 text-[clamp(1.55rem,3vw,1.95rem)] font-semibold leading-none">{value}</p>
     </div>
   );
 }
