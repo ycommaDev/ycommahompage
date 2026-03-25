@@ -303,7 +303,7 @@ export function SitePreview({ content }: SitePreviewProps) {
               {content.solutions.values.map((value) => (
               <CardSurface key={value.title} theme={theme} className="min-h-[200px]">
                 <h3 className="text-[clamp(1.25rem,2vw,1.55rem)] font-semibold leading-[1.15] tracking-[-0.03em]">
-                  {value.title}
+                  {renderMultilineText(value.title)}
                 </h3>
                 <p className="mt-3 text-sm leading-7 sm:text-[0.98rem]" style={{ color: theme.textMuted }}>
                   {renderMultilineText(value.description)}
