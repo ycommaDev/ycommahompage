@@ -222,6 +222,9 @@ function normalizeSiteContent(raw: unknown): SiteContent {
       milestones: Array.isArray(parsed.partners?.milestones)
         ? parsed.partners.milestones
         : initialSiteContent.partners.milestones,
+      history: Array.isArray(parsed.partners?.history)
+        ? parsed.partners.history
+        : initialSiteContent.partners.history,
     },
     about: {
       ...initialSiteContent.about,

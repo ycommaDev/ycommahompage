@@ -313,16 +313,6 @@ export function EditorPanel({
               }
             />
             <ColorField
-              label="CASE STUDY"
-              value={content.theme.sectionBackgroundCaseStudy}
-              onChange={(value) =>
-                onChange({
-                  ...content,
-                  theme: { ...content.theme, sectionBackgroundCaseStudy: value },
-                })
-              }
-            />
-            <ColorField
               label="MILESTONE"
               value={content.theme.sectionBackgroundPartners}
               onChange={(value) =>
@@ -762,82 +752,6 @@ export function EditorPanel({
         </div>
       )}
 
-      {selectedPanel === "caseStudy" && (
-        <div className="space-y-4">
-          <Field label="Section Title" value={content.caseStudy.title} onChange={(value) => onChange({ ...content, caseStudy: { ...content.caseStudy, title: value } })} />
-          <TextAreaField label="Description" value={content.caseStudy.description} onChange={(value) => onChange({ ...content, caseStudy: { ...content.caseStudy, description: value } })} />
-          <div className="flex justify-end">
-            <SmallButton
-              onClick={() =>
-                onChange({
-                  ...content,
-                  caseStudy: {
-                    ...content.caseStudy,
-                    stories: [
-                      ...content.caseStudy.stories,
-                      {
-                        brand: "New Brand",
-                        growth: "0%",
-                        note: "Add success story note",
-                      },
-                    ],
-                  },
-                })
-              }
-            >
-              + Add Story
-            </SmallButton>
-          </div>
-          {content.caseStudy.stories.map((story, index) => (
-            <PanelBlock key={`case-story-${index}`}>
-              <div className="flex justify-end">
-                <SmallButton
-                  destructive
-                  onClick={() =>
-                    onChange({
-                      ...content,
-                      caseStudy: {
-                        ...content.caseStudy,
-                        stories: content.caseStudy.stories.filter((_, itemIndex) => itemIndex !== index),
-                      },
-                    })
-                  }
-                >
-                  Delete
-                </SmallButton>
-              </div>
-              <TextAreaField
-                label={`Story ${index + 1} Brand`}
-                value={story.brand}
-                onChange={(value) => {
-                  const nextStories = [...content.caseStudy.stories];
-                  nextStories[index] = { ...story, brand: value };
-                  onChange({ ...content, caseStudy: { ...content.caseStudy, stories: nextStories } });
-                }}
-              />
-              <TextAreaField
-                label="Growth"
-                value={story.growth}
-                onChange={(value) => {
-                  const nextStories = [...content.caseStudy.stories];
-                  nextStories[index] = { ...story, growth: value };
-                  onChange({ ...content, caseStudy: { ...content.caseStudy, stories: nextStories } });
-                }}
-              />
-              <TextAreaField
-                label="Note"
-                value={story.note}
-                onChange={(value) => {
-                  const nextStories = [...content.caseStudy.stories];
-                  nextStories[index] = { ...story, note: value };
-                  onChange({ ...content, caseStudy: { ...content.caseStudy, stories: nextStories } });
-                }}
-              />
-            </PanelBlock>
-          ))}
-        </div>
-      )}
-
       {selectedPanel === "partners" && (
         <div className="space-y-4">
           <Field label="Section Title" value={content.partners.title} onChange={(value) => onChange({ ...content, partners: { ...content.partners, title: value } })} />
@@ -911,6 +825,70 @@ export function EditorPanel({
               />
             </PanelBlock>
           ))}
+          <div className="border-t border-white/10 pt-2">
+            <div className="mb-4 flex items-center justify-between">
+              <p className="text-sm font-medium text-zinc-300">History</p>
+              <SmallButton
+                onClick={() =>
+                  onChange({
+                    ...content,
+                    partners: {
+                      ...content.partners,
+                      history: [
+                        ...content.partners.history,
+                        {
+                          period: "2026",
+                          detail: "Add history detail",
+                        },
+                      ],
+                    },
+                  })
+                }
+              >
+                + Add History
+              </SmallButton>
+            </div>
+            <div className="space-y-4">
+              {content.partners.history.map((item, index) => (
+                <PanelBlock key={`partner-history-${index}`}>
+                  <div className="flex justify-end">
+                    <SmallButton
+                      destructive
+                      onClick={() =>
+                        onChange({
+                          ...content,
+                          partners: {
+                            ...content.partners,
+                            history: content.partners.history.filter((_, itemIndex) => itemIndex !== index),
+                          },
+                        })
+                      }
+                    >
+                      Delete
+                    </SmallButton>
+                  </div>
+                  <TextAreaField
+                    label={`History ${index + 1} Period`}
+                    value={item.period}
+                    onChange={(value) => {
+                      const nextItems = [...content.partners.history];
+                      nextItems[index] = { ...item, period: value };
+                      onChange({ ...content, partners: { ...content.partners, history: nextItems } });
+                    }}
+                  />
+                  <TextAreaField
+                    label="History Detail"
+                    value={item.detail}
+                    onChange={(value) => {
+                      const nextItems = [...content.partners.history];
+                      nextItems[index] = { ...item, detail: value };
+                      onChange({ ...content, partners: { ...content.partners, history: nextItems } });
+                    }}
+                  />
+                </PanelBlock>
+              ))}
+            </div>
+          </div>
         </div>
       )}
 
@@ -930,7 +908,7 @@ export function EditorPanel({
                       {
                         name: "New Service",
                         summary: "Add service summary",
-                        images: [{ src: "/images/services/service-marketing-1.svg", alt: "New service image" }],
+                        images: [{ src: "/images/services/service-marketing-1.webp", alt: "New service image" }],
                       },
                     ],
                   },
@@ -995,7 +973,7 @@ export function EditorPanel({
                       ...activeService,
                       images: [
                         ...(activeService.images ?? []),
-                        { src: "/images/services/service-marketing-1.svg", alt: "New service image" },
+                        { src: "/images/services/service-marketing-1.webp", alt: "New service image" },
                       ],
                     };
                     onChange({ ...content, about: { ...content.about, services: nextServices } });
@@ -1306,7 +1284,7 @@ export function EditorPanel({
                     ...content.content.items,
                     {
                       title: `Content ${content.content.items.length + 1}`,
-                      imageSrc: "/images/content/content-1.svg",
+                      imageSrc: "/images/content/content-1.webp",
                     },
                   ],
                 },

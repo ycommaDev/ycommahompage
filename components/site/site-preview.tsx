@@ -218,18 +218,13 @@ export function SitePreview({ content }: SitePreviewProps) {
                       alt={slide.alt}
                       fill
                       priority={index === 0}
+                      quality={100}
                       sizes="(max-width: 1280px) 100vw, 660px"
                       className="object-contain sm:object-cover"
                     />
                   )}
                 </div>
               ))}
-              <div
-                className="absolute inset-0"
-                style={{
-                  background: "linear-gradient(180deg, rgba(11,11,13,0) 0%, rgba(11,11,13,0.02) 58%, rgba(11,11,13,0.16) 78%, rgba(11,11,13,0.32) 100%)",
-                }}
-              />
             </div>
           </div>
 
@@ -328,32 +323,35 @@ export function SitePreview({ content }: SitePreviewProps) {
         theme={theme}
         tone="supporting"
       >
-        <div className="grid gap-4">
+        <div className="grid justify-center gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {content.partners.milestones.map((milestone, index) => (
             <CardSurface
               key={milestone.title}
               theme={theme}
-              className="xl:grid xl:grid-cols-[minmax(260px,320px)_minmax(0,1fr)] xl:items-center xl:gap-12"
+              className="mx-auto flex min-h-[220px] w-full max-w-[320px] flex-col justify-between text-center sm:min-h-[240px]"
               style={{ backgroundColor: toRgba(theme.cardBackground, 0.34) }}
             >
-              <div className="mb-5 border-b pb-5 text-center xl:mb-0 xl:border-b-0 xl:border-r xl:pb-0 xl:pr-10 xl:text-left">
+              <div>
                 <p
-                  className="text-sm font-medium tracking-[0.08em]"
+                  className="text-[0.72rem] font-medium uppercase tracking-[0.14em] sm:text-xs"
                   style={{ color: theme.textMuted }}
                 >
                   {String(index + 1).padStart(2, "0")}
                 </p>
-                <h3 className="mx-auto mt-3 max-w-[20ch] text-[1.32rem] font-semibold leading-[1.18] tracking-[-0.03em] sm:text-[1.5rem] xl:mx-0">
+                <h3 className="mx-auto mt-3 max-w-[18ch] text-[1.22rem] font-semibold leading-[1.16] tracking-[-0.03em] sm:text-[1.42rem]">
                   {milestone.title}
                 </h3>
               </div>
 
-              <div className="flex min-h-full flex-col items-center justify-center gap-5 text-center xl:items-start xl:text-left">
-                <div className="flex justify-center xl:justify-start">
-                  <Pill theme={theme}>{milestone.label}</Pill>
-                </div>
+              <div className="mt-6 flex flex-1 flex-col items-center justify-center gap-3">
                 <p
-                  className="mx-auto max-w-[46rem] text-[0.96rem] leading-7 sm:text-base sm:leading-8 xl:mx-0"
+                  className="text-[0.58rem] font-medium uppercase tracking-[0.18em] sm:text-[0.64rem]"
+                  style={{ color: toRgba(theme.textMuted, 0.88) }}
+                >
+                  {milestone.label}
+                </p>
+                <p
+                  className="mx-auto max-w-[28ch] text-[0.92rem] leading-7 sm:text-[0.96rem]"
                   style={{ color: theme.textMuted }}
                 >
                   {renderMultilineText(milestone.detail)}
@@ -362,6 +360,43 @@ export function SitePreview({ content }: SitePreviewProps) {
             </CardSurface>
           ))}
         </div>
+        {content.partners.history.length > 0 ? (
+          <div className="mt-10">
+            <div className="mb-6 border-t pt-6" style={{ borderColor: toRgba(theme.cardBorder, 0.32) }}>
+              <h3 className="text-[clamp(2rem,3vw,2.8rem)] font-semibold leading-none tracking-[-0.04em]">
+                History
+              </h3>
+            </div>
+            <div className="grid gap-x-12 gap-y-8 xl:grid-cols-2">
+              {chunkItems(content.partners.history, Math.ceil(content.partners.history.length / 2)).map(
+                (group, groupIndex) => (
+                  <div
+                    key={`history-column-${groupIndex}`}
+                    className="space-y-6 xl:border-l xl:pl-8"
+                    style={{ borderColor: toRgba(theme.cardBorder, 0.28) }}
+                  >
+                    {group.map((item, index) => (
+                      <div
+                        key={`${item.period}-${index}`}
+                        className="grid gap-2 sm:grid-cols-[150px_minmax(0,1fr)] sm:gap-4"
+                      >
+                        <p className="text-[1.75rem] font-semibold leading-none tracking-[-0.04em] sm:text-[2rem]">
+                          {item.period}
+                        </p>
+                        <p
+                          className="break-keep pt-1 text-[0.98rem] leading-7 sm:text-[1.02rem]"
+                          style={{ color: theme.textMuted }}
+                        >
+                          {renderMultilineText(item.detail)}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                ),
+              )}
+            </div>
+          </div>
+        ) : null}
       </SectionShell>
 
       <SectionShell
@@ -392,6 +427,7 @@ export function SitePreview({ content }: SitePreviewProps) {
                       src={platform.imageSrc}
                       alt={platform.imageAlt}
                       fill
+                      quality={100}
                       sizes="(max-width: 1280px) 100vw, 820px"
                       className="object-contain sm:object-cover"
                     />
@@ -452,35 +488,6 @@ export function SitePreview({ content }: SitePreviewProps) {
                 </div>
               ) : null}
             </div>
-          ))}
-        </div>
-      </SectionShell>
-
-      <SectionShell
-        id="platform-success"
-        eyebrow=""
-        title={content.caseStudy.title}
-        description={content.caseStudy.description}
-        backgroundColor={theme.sectionBackgroundCaseStudy}
-        theme={theme}
-        tone="supporting"
-      >
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {content.caseStudy.stories.map((story) => (
-            <CardSurface
-              key={story.brand}
-              theme={theme}
-              className="relative overflow-hidden"
-              style={{
-                background: `linear-gradient(145deg, ${toRgba(theme.accentFrom, 0.12)}, ${toRgba(theme.accentTo, 0.08)}), ${toRgba(theme.cardBackground, 0.76)}`,
-              }}
-            >
-              <h3 className="mt-4 text-[clamp(1.55rem,2.6vw,2rem)] font-semibold leading-[1.08] tracking-[-0.04em]">{story.brand}</h3>
-              <p className="mt-5 text-[clamp(3rem,5vw,4.5rem)] font-semibold leading-[0.9] tracking-[-0.06em]">{story.growth}</p>
-              <p className="mt-4 text-sm leading-7" style={{ color: theme.textMuted }}>
-                {story.note}
-              </p>
-            </CardSurface>
           ))}
         </div>
       </SectionShell>
@@ -714,19 +721,15 @@ export function SitePreview({ content }: SitePreviewProps) {
                       src={item.imageSrc}
                       alt={item.title}
                       fill
+                      quality={100}
                       sizes="(max-width: 1280px) 76vw, 420px"
                       className="object-contain sm:object-cover"
                     />
-                    <div
-                      className="absolute inset-x-0 bottom-0 p-5"
-                      style={{
-                        background: "linear-gradient(180deg, rgba(11,11,13,0) 0%, rgba(11,11,13,0.72) 100%)",
-                      }}
-                    >
-                      <p className="text-lg font-semibold tracking-[-0.03em] text-white">
-                        {renderMultilineText(item.title)}
-                      </p>
-                    </div>
+                  </div>
+                  <div className="px-5 pb-5 pt-4">
+                    <p className="text-lg font-semibold tracking-[-0.03em]">
+                      {renderMultilineText(item.title)}
+                    </p>
                   </div>
                 </CardSurface>
               ))}
@@ -859,7 +862,7 @@ function ServiceMediaCarousel({
   serviceName: string;
   theme: SiteContent["theme"];
 }) {
-  const slides = images.length > 0 ? images : [{ src: "/images/services/service-marketing-1.svg", alt: `${serviceName} showcase` }];
+  const slides = images.length > 0 ? images : [{ src: "/images/services/service-marketing-1.webp", alt: `${serviceName} showcase` }];
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -896,17 +899,12 @@ function ServiceMediaCarousel({
               src={image.src}
               alt={image.alt}
               fill
+              quality={100}
               sizes="(max-width: 1280px) 100vw, 420px"
               className="object-contain sm:object-cover"
             />
           </div>
         ))}
-        <div
-          className="absolute inset-0"
-          style={{
-            background: `linear-gradient(180deg, transparent 0%, ${toRgba(theme.pageBackground, 0.24)} 100%)`,
-          }}
-        />
       </div>
       {slides.length > 1 ? (
         <div className="flex items-center justify-center gap-2 px-4 py-3">

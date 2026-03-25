@@ -59,10 +59,10 @@
   "hero": {
     "eyebrow": "YCOMMA COMMERCE PLATFORM",
     "title": "Think Like a Rocket",
-    "description": "빠르게 실행하고, 확실하게 성장시키는 커머스 부스팅 팀.",
-    "primaryCta": "drrip 입점 문의",
+    "description": "당신의 비즈니스를 위한 All-Round 파트너",
+    "primaryCta": "CONTACT",
     "primaryCtaHref": "#contact",
-    "secondaryCta": "서비스 소개 보기",
+    "secondaryCta": "OUR SERVICES",
     "secondaryCtaHref": "#our-services",
     "slides": [
       {
@@ -77,13 +77,13 @@
     "imageAlt": "YCOMMA hero business visual"
   },
   "solutions": {
-    "title": "브랜디 초기/하이버 성장의 주역이 만든 팀",
-    "description": "와이콤마는 빠르게 성장하는 커머스 팀이 어떤 방식으로 플랫폼과 서비스를 확장하는지 몸으로 겪어본 사람들이 모인 조직입니다.",
+    "title": "WHO WE ARE",
+    "description": "와이콤마는 스타트업 DNA를 가진 사람들이 모여 있는 팀입니다.",
     "teamIntro": "YCOMMA Works",
     "highlights": [
       {
         "label": "IT service",
-        "value": "App / Web"
+        "value": "앱/웹\n기획 및 개발"
       },
       {
         "label": "content",
@@ -91,7 +91,7 @@
       },
       {
         "label": "mcn",
-        "value": "콜라보 상품 기획"
+        "value": "콘텐츠 매니징/콜라보 상품 기획"
       },
       {
         "label": "pop-up event",
@@ -118,7 +118,7 @@
     ]
   },
   "products": {
-    "title": "커머스 인프라와 실전 운영 경험을 동시 제공",
+    "title": "OUR PLATFORMS",
     "description": "",
     "platforms": [
       {
@@ -178,26 +178,10 @@
   "caseStudy": {
     "title": "YCOMMA 성공 사례",
     "description": "",
-    "stories": [
-      {
-        "brand": "호주 어그",
-        "growth": "20,908%",
-        "note": "입점 이후 가파른 매출 성장과 콘텐츠 노출 최적화 사례"
-      },
-      {
-        "brand": "리끌로우",
-        "growth": "11,128%",
-        "note": "프로모션 구조와 재구매 유도 설계로 전환율을 극대화한 사례"
-      },
-      {
-        "brand": "아티드",
-        "growth": "10,957%",
-        "note": "상품 기획과 브랜딩 메시지 정교화로 폭발적 성장을 만든 사례"
-      }
-    ]
+    "stories": []
   },
   "partners": {
-    "title": "투자와 제도권 검증으로 신뢰를 확보한 팀",
+    "title": "Milestone",
     "description": "투자와 제도권의 선택을 통해, 우리의 실행력과 성장 가능성을 증명해왔습니다.",
     "milestones": [
       {
@@ -220,10 +204,48 @@
         "title": "한국디자인진흥원 스타일테크",
         "detail": "패션·뷰티 산업과 디지털 기술이 결합한 차세대 성장 분야로 인정받았습니다."
       }
+    ],
+    "history": [
+      {
+        "period": "2018 ~ 2020",
+        "detail": "남성패션플랫폼 \"하이버\" 초기 서비스 런칭 및 GMV 500억 달성"
+      },
+      {
+        "period": "2020 ~ 2023",
+        "detail": "모빌리티 플랫폼 \"오늘의카\" 창업 및 한국타이어 투자 유치"
+      },
+      {
+        "period": "2021 ~ 2023",
+        "detail": "모빌리티 MCN \"스튜디오랩타임\" 창업 및 첫해 매출 10억 달성"
+      },
+      {
+        "period": "2024",
+        "detail": "와이콤마 창업 : 외주 클라이언트 20개 달성"
+      },
+      {
+        "period": "2024.08",
+        "detail": "본엔젤스 시드 투자 유치"
+      },
+      {
+        "period": "2024.10",
+        "detail": "슈미트 시드 투자 유치"
+      },
+      {
+        "period": "2024.11",
+        "detail": "팁스 선정"
+      },
+      {
+        "period": "2025.01",
+        "detail": "3040 공구 플랫폼 \"drrip\" 서비스 런칭"
+      },
+      {
+        "period": "2026.04",
+        "detail": "커머스운영관리솔루션 \"펭귄보드\" 커밍순"
+      }
     ]
   },
   "about": {
-    "title": "당신의 비즈니스를 위한 All-Round 파트너",
+    "title": "OUR SERVICES",
     "description": "플랫폼 운영 경험을 바탕으로 마케팅, 개발, 세일즈 자료 제작까지 B2B 실행 서비스를 제공합니다.",
     "services": [
       {
@@ -231,12 +253,20 @@
         "summary": "숏폼, 바이럴, 퍼포먼스 중심으로 빠르게 전환을 만드는 마케팅 실행",
         "images": [
           {
-            "src": "/images/services/service-marketing-1.svg",
+            "src": "/images/services/service-marketing-1.webp",
             "alt": "Marketing service showcase 1"
           },
           {
-            "src": "/images/services/service-marketing-2.svg",
+            "src": "/images/services/service-marketing-2.webp",
             "alt": "Marketing service showcase 2"
+          },
+          {
+            "src": "/images/services/service-marketing-3.webp",
+            "alt": "New service image"
+          },
+          {
+            "src": "/images/services/service-marketing-4.webp",
+            "alt": "New service image"
           }
         ]
       },
@@ -284,7 +314,7 @@
     "footer": {
       "ceo": "김현중, 선종석",
       "address": "서울창업허브 공덕 별관 418호",
-      "email": "contact@ycomma.co.kr",
+      "email": "kimhj@ycomma.com",
       "phone": "070-7602-9000",
       "links": []
     }
@@ -335,23 +365,23 @@
     "items": [
       {
         "title": "드랍바이서울 성수 오프라인 팝업",
-        "imageSrc": "/images/content/content-5.jpg"
+        "imageSrc": "/images/content/content-5.webp"
       },
       {
         "title": "drop by drrip EVENT Vol.2",
-        "imageSrc": "/images/content/content-4.jpg"
+        "imageSrc": "/images/content/content-4.webp"
       },
       {
         "title": "drop by drrip Event Vol.1",
-        "imageSrc": "/images/content/content-3.jpg"
+        "imageSrc": "/images/content/content-3.webp"
       },
       {
         "title": "drop by drrip Event Vol.1",
-        "imageSrc": "/images/content/content-2.jpg"
+        "imageSrc": "/images/content/content-2.webp"
       },
       {
         "title": "드립X스퀘어라인 한남동 팝업",
-        "imageSrc": "/images/content/content-1.jpg"
+        "imageSrc": "/images/content/content-1.webp"
       }
     ]
   }

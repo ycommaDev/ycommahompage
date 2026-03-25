@@ -5,7 +5,6 @@ export type SiteSectionKey =
   | "solutions"
   | "products"
   | "metrics"
-  | "caseStudy"
   | "partners"
   | "about"
   | "contact"
@@ -122,6 +121,10 @@ export interface PartnersSection {
     title: string;
     detail: string;
   }>;
+  history: Array<{
+    period: string;
+    detail: string;
+  }>;
 }
 
 export interface AboutSection {
@@ -196,7 +199,6 @@ export const sectionLabels: Record<SiteSectionKey, string> = {
   solutions: "WHO WE ARE",
   products: "OUR PLATFORM",
   metrics: "Platform Metrics",
-  caseStudy: "Success Stories",
   partners: "Milestones",
   about: "OUR SERVICES",
   contact: "CONTACT",
