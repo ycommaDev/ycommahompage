@@ -134,13 +134,12 @@
         "imageAlt": "drrip platform preview"
       },
       {
-        "name": "Penguin Board",
-        "summary": "커머스 운영 관리 SaaS 솔루션",
+        "name": "Penguin Board (Beta)",
+        "summary": "커머스 운영 관리 SaaS 솔루션\n확실한 유통 채널 관리를 통해 부주의로 인한 손실을 줄여줍니다.",
         "highlights": [
-          "플랫폼별 가격 모니터링",
-          "플랫폼별 프로모션 캘린더",
-          "상품별 마진 모니터링",
-          "시즌별 상품 판매량 아카이빙"
+          "채널별 24시간 가격 모니터링",
+          "채널별 프로모션 캘린더",
+          "상품별 마진 모니터링"
         ],
         "href": "https://2228zwvzjf.ap-northeast-1.awsapprunner.com/",
         "imageSrc": "/images/platforms/penguin-overview.svg",
@@ -161,19 +160,19 @@
     "items": [
       {
         "label": "MAU",
-        "value": "120,000+"
+        "value": "150 K +"
       },
       {
         "label": "Downloads",
-        "value": "95,000+"
+        "value": "120 K +"
       },
       {
         "label": "Accounts",
-        "value": "70,000+"
+        "value": "75 K +"
       },
       {
         "label": "Partner",
-        "value": "190+"
+        "value": "220+"
       }
     ]
   },
@@ -332,7 +331,7 @@
       "ceo": "김현중, 선종석",
       "address": "서울창업허브 공덕 별관 418호",
       "email": "kimhj@ycomma.com",
-      "phone": "070-7602-9000",
+      "phone": "010-3227-0883",
       "links": [
         {
           "label": "Footer Link",
