@@ -473,7 +473,7 @@ export function SitePreview({ content }: SitePreviewProps) {
                         className="mt-5 max-w-[34ch] text-base leading-8 sm:text-[1.06rem]"
                         style={{ color: theme.textMuted }}
                       >
-                        {platform.summary}
+                        {renderMultilineText(platform.summary)}
                       </p>
                     </div>
 
