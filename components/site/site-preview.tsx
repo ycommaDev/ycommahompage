@@ -623,6 +623,22 @@ export function SitePreview({ content }: SitePreviewProps) {
           </CardSurface>
 
         </div>
+        {content.contact.formCtaLabel && content.contact.formCtaHref ? (
+          <div className="mt-8 flex justify-center">
+            <a
+              href={content.contact.formCtaHref}
+              target={content.contact.formCtaHref.startsWith("#") ? undefined : "_blank"}
+              rel={content.contact.formCtaHref.startsWith("#") ? undefined : "noreferrer"}
+              className="inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold tracking-[-0.01em] transition-transform duration-200 hover:-translate-y-0.5"
+              style={{
+                background: `linear-gradient(135deg, ${theme.accentFrom}, ${theme.accentTo})`,
+                color: "#ffffff",
+              }}
+            >
+              {content.contact.formCtaLabel}
+            </a>
+          </div>
+        ) : null}
       </SectionShell>
 
       <SectionShell
