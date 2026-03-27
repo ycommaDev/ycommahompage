@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   title: "YCOMMA(\uC640\uC774\uCF64\uB9C8) | \uB2F9\uC2E0\uC758 \uBE44\uC988\uB2C8\uC2A4\uB97C \uC704\uD55C All-Round \uD30C\uD2B8\uB108",
   description: "\uBE44\uC988\uB2C8\uC2A4 \uBD80\uC2A4\uD305 \uC5D0\uC774\uC804\uC2DC \uC640\uC774\uCF64\uB9C8(YCOMMA)",
   icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/icon.svg",
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
   openGraph: {
     title: "YCOMMA(\uC640\uC774\uCF64\uB9C8) | \uB2F9\uC2E0\uC758 \uBE44\uC988\uB2C8\uC2A4\uB97C \uC704\uD55C All-Round \uD30C\uD2B8\uB108",
