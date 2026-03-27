@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /cms
+Disallow: /api
+
+Host: https://ycomma.com
+Sitemap: https://ycomma.com/sitemap.xml
