@@ -254,6 +254,10 @@
         "summary": "숏폼, 바이럴, 퍼포먼스 중심으로 빠르게 전환을 만드는 마케팅 실행",
         "images": [
           {
+            "src": "/images/services/service-marketing-8.png",
+            "alt": "New service image"
+          },
+          {
             "src": "/images/services/service-marketing-1.webp",
             "alt": "Marketing service showcase 1"
           },
